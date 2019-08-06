@@ -16,3 +16,5 @@ Hardware used:
 3. [SCT-013-000 Current Transformer 100A](https://www.amazon.com/CTYRZCH-SCT-013-000-Non-invasive-Current-Transformer/dp/B01C5JL5IY)
 4. [US AC Adapter 77DA-10-09](http://lechacalshop.com/gb/internetofthing/54-usacac.html)
 5. [5v 3A Power Adapter for RPi 3 with integrated switch](https://www.amazon.com/Yuconn-Charger-Adapter-Raspberry-SoundLink/dp/B071YC2T9S)
+
+As a note, you don't need to install InfluxDB and Grafana on the same Raspberry Pi that you are reading energy data from. You can configure an external server that will accept your injested data. This can be a hosted solution as well as a on-premesis server. Just make the appropriate changes to `config.conf` with the proper `URL`, `Username` and `Password` of your external/hosted solution. Otherwise, it will all run from the Raspberry Pi just fine.
