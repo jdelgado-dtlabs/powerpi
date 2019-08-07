@@ -6,9 +6,11 @@ def generateData(start, end):
     rand = random.randrange(start, end)
     return rand
 
+lines = 90
+
 f = open("testdata.txt", "w+")
 
-for l in range(90):
+for l in range(lines):
     data = ""
     for i in range(15):
         i += 1
