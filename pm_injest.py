@@ -8,8 +8,14 @@ import datetime
 import math
 import signal
 
+def printStatus(message):
+    dt = datetime.datetime.now()
+    d = dt.strftime("%Y-%m-%d %H:%M")
+    for m in message.splitlines():
+        print("[%s] %s" % (d, m))
+
 def termProcess(signalNumber, frame):
-    print('Exiting...')
+    printStatus('Exiting...')
     sys.exit()
 
 if __name__ =='__main__':
@@ -21,7 +27,7 @@ if __name__ =='__main__':
     baud = c.getint('system','baud')
     serial_port = c.get('system', 'port')
     if not os.path.exists(serial_port):
-        print('Serial port not found')
+        printStatus('Serial port not found')
         sys.exit()
     ser = serial.Serial(serial_port, baud, timeout=3)
 
@@ -33,13 +39,13 @@ if __name__ =='__main__':
         data_in = ser.readline()
         ser.close()
         if not data_in:
-            print('No data received')
+            printStatus('No data received')
             continue
 
         utcnow = datetime.datetime.now()
 		
         timestamp = utcnow.strftime("%s")
-        #print(data_in)
+        #printStatus(data_in)
         while data_in[-1] in ['\r', '\n']:
             data_in = data_in[:-1]
 
@@ -78,6 +84,6 @@ if __name__ =='__main__':
                 pass
 
         #payload = "rpict3t1,channel=01 value=50.2 %s\nrpict3t1,channel=02 value=156.2 %s\n" % (t,t)
-        print(payload)
+        printStatus(payload)
         r = requests.post(url, params=params, data=payload)
-        print(r.text)
+        printStatus(r.text)
