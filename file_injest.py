@@ -78,4 +78,4 @@ if __name__ =='__main__':
         printStatus(payload)
         r = requests.post(url, params=params, data=payload)
         printStatus(r.text)
-        #time.sleep(2)
+        time.sleep(2)
