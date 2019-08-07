@@ -10,7 +10,7 @@ import signal
 
 def printStatus(message):
     dt = datetime.datetime.now()
-    d = dt.strftime("%Y-%m-%d %H:%M")
+    d = dt.strftime("%Y-%m-%d %H:%M:%S")
     for m in message.splitlines():
         print("[%s] %s" % (d, m))
 
