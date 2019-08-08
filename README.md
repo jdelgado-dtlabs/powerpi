@@ -34,4 +34,4 @@ This is how the dashboard looks like. The JSON file included will generate these
 
 ![PowerPi Dashbaord](https://raw.githubusercontent.com/jdelgado-dtlabs/powerpi/master/README/images/dashboard.jpg "PowerPi Dashbaord")
 
-For the Daily kWh and Monthly kWh, you will need to edit the query slightly to adjust to your time zone. [Visit this site to learn about which time zones to use](https://docs.influxdata.com/influxdb/v1.7/query_language/data_exploration/#the-time-zone-clause)
+For the Daily kWh and Monthly kWh, you will need to edit the query slightly to adjust to your time zone. [Visit this site to learn about which time zones to use](https://docs.influxdata.com/influxdb/v1.7/query_language/data_exploration/#the-time-zone-clause).
