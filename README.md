@@ -27,3 +27,11 @@ Hardware used:
 6. [SanDisk 128GB Ultra Fit USB 3.1 Flash Drive - SDCZ430-128G-G46](https://www.amazon.com/SanDisk-128GB-Ultra-Flash-Drive/dp/B07855LJ99) (For database storage)
 
 As a note, you don't need to install InfluxDB and Grafana on the same Raspberry Pi that you are reading energy data from. You can configure an external server that will accept your ingested data. This can be a hosted solution as well as a on-premesis server. Just make the appropriate changes to `config.conf` with the proper `URL`, `Username` and `Password` of your external/hosted solution. Otherwise, it will all run from the Raspberry Pi just fine.
+
+---
+
+This is how the dashboard looks like. The JSON file included will generate these dashboards for you. *Subject to change.*
+
+![PowerPi Dashbaord](https://raw.githubusercontent.com/jdelgado-dtlabs/powerpi/master/README/images/dashboard.jpg "PowerPi Dashbaord")
+
+For the Daily kWh and Monthly kWh, you will need to edit the query slightly to adjust to your time zone. [Visit this site to learn about which timze zones to use](https://docs.influxdata.com/influxdb/v1.7/query_language/data_exploration/#the-time-zone-clause)

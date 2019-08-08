@@ -1416,7 +1416,7 @@
           "measurement": "realpower",
           "orderByTime": "ASC",
           "policy": "default",
-          "query": "SELECT integral(\"value\") / 3600 FROM \"realpower\" WHERE (\"device\" = 'rpict3v1') AND $timeFilter GROUP BY time(2s) fill(null)",
+          "query": "SELECT integral(\"value\")  / 3600 FROM \"realpower\" WHERE (\"device\" = 'rpict3v1') AND $timeFilter GROUP BY time(1d) fill(null)",
           "rawQuery": false,
           "refId": "A",
           "resultFormat": "time_series",
@@ -1434,7 +1434,7 @@
               },
               {
                 "params": [
-                  " / 3600"
+                  "/ 3600"
                 ],
                 "type": "math"
               }
@@ -1446,7 +1446,8 @@
               "operator": "=",
               "value": "rpict3v1"
             }
-          ]
+          ],
+          "tz": "America/Los_Angeles"
         }
       ],
       "thresholds": [],
@@ -1461,7 +1462,7 @@
       },
       "type": "graph",
       "xaxis": {
-        "buckets": null,
+        "buckets": 5,
         "mode": "time",
         "name": null,
         "show": true,
@@ -1473,7 +1474,7 @@
           "label": null,
           "logBase": 1,
           "max": null,
-          "min": null,
+          "min": "0",
           "show": true
         },
         {
@@ -1583,7 +1584,8 @@
               "operator": "=",
               "value": "rpict3v1"
             }
-          ]
+          ],
+          "tz": "America/Los_Angeles"
         }
       ],
       "thresholds": [],
@@ -1610,7 +1612,7 @@
           "label": null,
           "logBase": 1,
           "max": null,
-          "min": null,
+          "min": "0",
           "show": true
         },
         {
@@ -1667,5 +1669,5 @@
   "timezone": "browser",
   "title": "Power Monitor",
   "uid": "W2cwkLzgz",
-  "version": 45
+  "version": 52
 }
