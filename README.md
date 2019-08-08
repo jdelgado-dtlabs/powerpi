@@ -1,6 +1,9 @@
 # PowerPi
-This project is for creating a power consumption monitor with Raspberry Pi. At the time of this writing, a Raspberry Pi 3 B+ was used. It is compatible with the Raspberry Pi 4.
-
+This project is for creating a power consumption monitor with Raspberry Pi. At the time of this writing, a Raspberry Pi 3 B+ was used. It is compatible with the Raspberry Pi 4. 
+---
+This is designed for single split-phase 3-wire installations. My premesis uses a subpanel to distribute all power from from the mains panels in three wires (2 hot, 1 neutral).
+![100A Power Subpanel US](https://raw.githubusercontent.com/jdelgado-dtlabs/powerpi/master/README/images/panel.jpg)
+---
 Things you will need to install on your system:
 
 1. Install Raspbian Buster with minimal options.
@@ -18,4 +21,4 @@ Hardware used:
 5. [5v 3A Power Adapter for RPi 3 with integrated switch](https://www.amazon.com/Yuconn-Charger-Adapter-Raspberry-SoundLink/dp/B071YC2T9S)
 6. [SanDisk 128GB Ultra Fit USB 3.1 Flash Drive - SDCZ430-128G-G46](https://www.amazon.com/SanDisk-128GB-Ultra-Flash-Drive/dp/B07855LJ99) (For database storage)
 
-As a note, you don't need to install InfluxDB and Grafana on the same Raspberry Pi that you are reading energy data from. You can configure an external server that will accept your injested data. This can be a hosted solution as well as a on-premesis server. Just make the appropriate changes to `config.conf` with the proper `URL`, `Username` and `Password` of your external/hosted solution. Otherwise, it will all run from the Raspberry Pi just fine.
+As a note, you don't need to install InfluxDB and Grafana on the same Raspberry Pi that you are reading energy data from. You can configure an external server that will accept your ingested data. This can be a hosted solution as well as a on-premesis server. Just make the appropriate changes to `config.conf` with the proper `URL`, `Username` and `Password` of your external/hosted solution. Otherwise, it will all run from the Raspberry Pi just fine.
