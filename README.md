@@ -3,9 +3,9 @@ This project is for creating a power consumption monitor with Raspberry Pi. At t
 
 ---
 
-This is designed for single split-phase 3-wire installations. My premesis uses a subpanel to distribute all power from from the mains panels in three wires (2 hot, 1 neutral).
+This is designed for US single split-phase 3-wire installations. My premesis uses a subpanel to distribute all power from from the mains panels in three wires (2 hot, 1 neutral).
 
-![100A Power Subpanel US](https://raw.githubusercontent.com/jdelgado-dtlabs/powerpi/master/README/images/panel.jpg)
+![100A Power Subpanel US](https://raw.githubusercontent.com/jdelgado-dtlabs/powerpi/master/README/images/panel.jpg "100A Power Subpanel US")
 
 ---
 
