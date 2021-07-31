@@ -72,19 +72,19 @@ if __name__ =='__main__':
         payload = ""
         for dd in d[1:]:
             i += 1
-            if i == 1 or i == 6: #or i == 11:
+            if i == 1 or i == 6 or i == 11:
                 nn = math.ceil(i/5)
                 payload += "realpower,device=%s,channel=%02d value=%s %s\n" % (device, nn, dd, t)
-            if i == 2 or i == 7: #or i == 12:
+            if i == 2 or i == 7 or i == 12:
                 nn = math.ceil(i/5)
                 payload += "apparantpower,device=%s,channel=%02d value=%s %s\n" % (device, nn, dd, t)
-            if i == 3 or i == 8: #or i == 13:
+            if i == 3 or i == 8 or i == 13:
                 nn = math.ceil(i/5)
                 payload += "irms,device=%s,channel=%02d value=%s %s\n" % (device, nn, dd, t)
-            if i == 4 or i == 9: #or i == 14:
+            if i == 4 or i == 9 or i == 14:
                 nn = math.ceil(i/5)
                 payload += "vrms,device=%s,channel=%02d value=%s %s\n" % (device, nn, dd, t)
-            if i == 5 or i == 10: #or i == 15:
+            if i == 5 or i == 10 or i == 15:
                 nn = math.ceil(i/5)
                 payload += "powerfactor,device=%s,channel=%02d value=%s %s\n" % (device, nn, dd, t)
             else:
