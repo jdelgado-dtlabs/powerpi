@@ -61,7 +61,8 @@ def generate_payload(dataset, device):
             channel = math.ceil(i/5)
             payload.append(f"powerfactor,device={device},channel=0{channel} value={data}")
         else:
-            return payload
+            pass
+    return payload
 
 if __name__ =='__main__':
     signal.signal(signal.SIGINT, termProcess)
