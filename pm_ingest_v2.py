@@ -87,5 +87,5 @@ if __name__ =='__main__':
             with InfluxDBClient(url=url, token=token, org=org) as client:
                 write_api = client.write_api(write_options=SYNCHRONOUS)
                 write_api.write(bucket, org, payload)
-                client.close()
+            client.close()
                 
