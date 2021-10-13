@@ -4,9 +4,9 @@ baud=38400
 
 [influxdb]
 enabled = True
-token = LHGY9_1W3s44aQ1h9ueSWqa9uR8vHM6lvQKrQQL2omRH0mp6oc5qb-ns-09MN_g1sGC_Y01ge9CX4UWq6bJ94A==
-url = https://us-west-2-1.aws.cloud2.influxdata.com
-org = delgadoj@deltechlabs.com
+token = 
+url = 
+org = 
 bucket = powermon
 device = rpict3v1
 
